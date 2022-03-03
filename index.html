@@ -32,18 +32,40 @@
 
 				if(empty($_POST["firstName"]))
 				{
-					$firstNameErr = "First Name is required";
+					$firstNameErr = "First Name is required.";
 				}
 				else
 				{
 					$firstName = test_input($_POST["firstName"]);
 				}
 
+				if(empty($_POST["lastName"]))
+				{
+					$lastNameErr = "Last Name is required.";
+				}
+				else
+				{
+					$lastName = test_input($_POST["lastName"]);
+				}
 
-				
-				$lastName = test_input($_POST["lastName"]);
-				$userName = test_input($_POST["userName"]);
-				$password = test_input($_POST["password"]);
+				if(empty($_POST["userName"]))
+				{
+					$userNameErr = "User Name is required.";
+				}
+				else
+				{
+					$userName = test_input($_POST["userName"]);
+				}
+
+				if(empty($_POST["password"]))
+				{
+					$passwordErr = "password is required.";
+				}
+				else
+				{
+					$password = test_input($_POST["password"]);
+				}
+
 			}
 
 
@@ -73,13 +95,13 @@
 		<input type="input" id="firstName" name="firstName"> <span class="error">* <?php echo $firstNameErr; ?></span>
 
 		<label for="lastName">Last Name</label>
-		<input type="input" id="lastName" name="lastName">
+		<input type="input" id="lastName" name="lastName"> <span class="error">* <?php echo $lastNameErr; ?></span>
 
 		<label for="userName">User name</label>
-		<input type="input" id="userName" name="userName">
+		<input type="input" id="userName" name="userName"> <span class="error">* <?php echo $userNameErr; ?></span>
 
 		<label for="password">Password</label>
-		<input type="password" id="password" name="password">
+		<input type="password" id="password" name="password"> <span class="error">* <?php echo $passwordErr; ?></span>
 
 		<input type="submit" value="Sign Up">
 	</form>
