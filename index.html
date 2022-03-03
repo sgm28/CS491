@@ -7,6 +7,10 @@
 </head>
 <body>
 	<h1>Behind The Stick Development </h1>
+
+	<!-- The index.html will submit the user input to this page and not move on to another -->
+	<!-- $_SERVER["PHP_SELF"] display the name of file that is submitting data -->
+	<!--  htmlspecialchars() prevents cross site scripting  -->
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 		<label for="firstName">First Name</label>
 		<input type="input" id="firstName" name="firstName">
