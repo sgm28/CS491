@@ -16,7 +16,7 @@
 
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 		<label for="firstName">First Name</label>
-		<input type="input" id="firstName" name="firstName"> <span class="error">* <?php echo $firstNameErr;?></span>
+		<input type="input" id="firstName" name="firstName"> <span class="error">* <?php echo $firstNameErr; ?></span>
 
 		<label for="lastName">Last Name</label>
 		<input type="input" id="lastName" name="lastName">
@@ -84,6 +84,7 @@
 	?>
 
 	<?php
+		echo $firstNameErr;
 		echo $firstName;
 		echo "<br>";
 		echo $lastName;
