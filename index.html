@@ -31,6 +31,12 @@
 			{
 
 
+
+$name = test_input($_POST["name"]);
+if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+  $nameErr = "Only letters and white space allowed";
+}
+
 				if(empty($_POST["firstName"]))
 				{
 					$firstNameErr = "First Name is required.";
@@ -38,6 +44,15 @@
 				else
 				{
 					$firstName = test_input($_POST["firstName"]);
+
+
+					if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName))
+					{
+						$firstNameErr = "Only letters, dashes and white space allowed";
+					}
+					
+
+
 				}
 
 				if(empty($_POST["lastName"]))
