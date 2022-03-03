@@ -6,6 +6,8 @@
 	<title>Behind The Stick</title>
 </head>
 <body>
+
+
 	<h1>Behind The Stick Development </h1>
 
 	<!-- The index.html will submit the user input to this page and not move on to another -->
@@ -26,5 +28,39 @@
 
 		<input type="submit" value="Sign Up">
 	</form>
+
+
+	<!-- PHP SECTION -->
+	<?php
+
+		$firstName = "";
+		$lastName = "";
+		$userName = "";
+		$password = "";
+
+		if ($_SERVER["REQUEST_METHOD"] == "post")
+		{
+			$firstName = test_input($_POST['firstName']);
+		}
+
+		function test_input($data) {
+			$data = trim($data);
+			$data = stripslashes($data);
+			$data = htmlspecialchars($data);
+			return $data;
+
+		}
+
+		echo "$data";
+
+	?>
+
+
+
+
+
+
 </body>
 </html>
+
+
