@@ -61,6 +61,12 @@
 				else
 				{
 					$email = test_input($_POST["email"]);
+					
+					if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+					{
+						$emailErr = "Not a valid email.";
+					}
+
 				}
 
 				if(empty($_POST["password"]))
