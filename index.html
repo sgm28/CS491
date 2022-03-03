@@ -38,9 +38,9 @@
 		$userName = "";
 		$password = "";
 
-		if ($_SERVER["REQUEST_METHOD"] == "post")
+		if ($_SERVER["REQUEST_METHOD"] == "POST")
 		{
-			$firstName = test_input($_POST['firstName']);
+			$firstName = test_input($_POST["firstName"]);
 		}
 
 		function test_input($data) {
@@ -51,10 +51,13 @@
 
 		}
 
-		echo "$firstName";
+		
 
 	?>
 
+	<?php
+		echo $firstName;
+	?>
 
 
 
