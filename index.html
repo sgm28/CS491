@@ -104,22 +104,22 @@
 
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 		<label for="firstName">First Name</label>
-		<input type="input" id="firstName" name="firstName"> <span class="error">* <?php echo $firstNameErr; ?></span>
+		<input type="input" id="firstName" name="firstName" value="<?php echo $firstName;?>"> <span class="error">* <?php echo $firstNameErr; ?></span>
 
 		<label for="lastName">Last Name</label>
-		<input type="input" id="lastName" name="lastName"> <span class="error">* <?php echo $lastNameErr; ?></span>
+		<input type="input" id="lastName" name="lastName" value="<?php echo $lastName;?>"><span class="error">* <?php echo $lastNameErr; ?></span>
 
 		<label for="Email">Email</label>
-		<input type="input" id="email" name="email"> <span class="error">* <?php echo $emailErr; ?></span>
+		<input type="input" id="email" name="email" value="<?php echo $email;?>"><span class="error">* <?php echo $emailErr; ?></span>
 
 		<label for="password">Password</label>
-		<input type="password" id="password" name="password"> <span class="error">* <?php echo $passwordErr; ?></span>
+		<input type="password" id="password" name="password" value="<?php echo $password;?>"><span class="error">* <?php echo $passwordErr; ?></span>
 
 		<input type="submit" value="Sign Up">
 	</form>
 
 
-	
+
 
 
 
