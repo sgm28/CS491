@@ -57,7 +57,7 @@
 					$lastName = test_input($_POST["lastName"]);
 
 					//Checking for validate Last Name
-					if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName))
+					if (!preg_match("/^[a-zA-Z-' ]*$/", $lastName))
 					{
 						$lastNameErr = "Only letters, dashes and white space allowed";
 					}
