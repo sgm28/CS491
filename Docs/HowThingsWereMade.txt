@@ -1,0 +1,3 @@
+The index.html page was created with the help of the following tutorial on W3School
+
+https://www.w3schools.com/php/php_form_complete.asp
