@@ -24,7 +24,8 @@
 
 
 			//Checking to see if the form was submitted 
-			// if form is submitted, I am calling the test_input function to "clean the data", then returning the clean data back to the if statement
+			// if form is submitted, 
+			//I am calling the test_input function to "clean the data", then returning the clean data back to the if statement
 			//Else printing error message
 
 			if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -39,6 +40,7 @@
 					$firstName = test_input($_POST["firstName"]);
 
 
+					//Checking for validate first Name
 					if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName))
 					{
 						$firstNameErr = "Only letters, dashes and white space allowed";
@@ -51,7 +53,16 @@
 				}
 				else
 				{
+
 					$lastName = test_input($_POST["lastName"]);
+
+					//Checking for validate Last Name
+					if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName))
+					{
+						$lastNameErr = "Only letters, dashes and white space allowed";
+					}
+
+					
 				}
 
 				if(empty($_POST["email"]))
@@ -124,18 +135,7 @@
 
 
 
-	<?php
-
-		echo $firstName;
-		echo "<br>";
-		echo $lastName;
-		echo "<br>";
-		echo $email;
-		echo "<br>";
-		echo $password;
-	?>
-
-
+	
 
 
 
