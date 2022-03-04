@@ -43,7 +43,7 @@
 					//Checking for validate first Name
 					if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName))
 					{
-						$firstNameErr = "Only letters, dashes and white space allowed";
+						$firstNameErr = "Only letters, dashes and white space allowed.";
 					}
 				}
 
@@ -59,7 +59,7 @@
 					//Checking for validate Last Name
 					if (!preg_match("/^[a-zA-Z-' ]*$/", $lastName))
 					{
-						$lastNameErr = "Only letters, dashes and white space allowed";
+						$lastNameErr = "Only letters, dashes and white space allowed.";
 					}
 
 					
@@ -93,7 +93,7 @@
 
 
 
-			//gets rids of whitespace, blackslahses and converts "<" to "&lt"
+			//gets rids of leading whitespace, blackslahses and converts "<" to "&lt"
 			function test_input($data) {
 				$data = trim($data);
 				$data = stripslashes($data);
