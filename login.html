@@ -9,79 +9,7 @@
 </head>
 <body>
 
-	<!-- PHP SECTION -->
-		<?php
-
-			//Variables to store data
-			$email = "";
-			$password = "";
-
-			//Variables for Error Messages
-			$emailErr = "";
-			$passwordErr = "";
-
-
-			//Checking to see if the form was submitted 
-			// if form is submitted, 
-			//I am calling the test_input function to "clean the data", then returning the clean data back to the if statement
-			//Else printing error message
-
-			if ($_SERVER["REQUEST_METHOD"] == "POST")
-			{
-
-
-				if(empty($_POST["email"]))
-				{
-					$emailErr = "Email is required.";
-				}
-				else
-				{
-					$email = test_input($_POST["email"]);
-					
-					if (!filter_var($email, FILTER_VALIDATE_EMAIL))
-					{
-						$emailErr = "Not a valid email.";
-					}
-
-				}
-
-				if(empty($_POST["password"]))
-				{
-					$passwordErr = "password is required.";
-				}
-				else
-				{
-					$password = test_input($_POST["password"]);
-				}
-
-				if ( empty($emailErr) and  empty($passwordErr))
-			  {
-				
-				$_SESSION["email"] = $email;
-				$_SESSION["password"] = $password;
-				//header("location: ./phpFunctions/register.php");
-				exit();
-
-			 }
-
-		   }
-
-				
-
-
-
-
-
-			//gets rids of leading whitespace, blackslahses and converts "<" to "&lt"
-			function test_input($data) {
-				$data = trim($data);
-				$data = stripslashes($data);
-				$data = htmlspecialchars($data);
-				return $data;
-
-			}	
-
-		?>
+	
 
 
 	<!-- HTML SECTION -->
@@ -92,7 +20,7 @@
 	<!-- $_SERVER["PHP_SELF"] display the name of file that is submitting data -->
 	<!--  htmlspecialchars() prevents cross site scripting  -->
 
-	<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+	<form method="post" action="./phpFunctions/login.php">
 
 		
 		<label for="Email">Email</label> <span class="error">* <?php echo $emailErr; ?></span>
