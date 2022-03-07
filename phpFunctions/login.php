@@ -20,6 +20,7 @@
 		$stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
 		$stmt->bindParam(':email', $email);
 		$stmt->execute();
+		var_dump($stmt);
 
 		 // set the resulting array to associative
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
