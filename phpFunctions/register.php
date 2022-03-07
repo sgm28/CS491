@@ -24,7 +24,7 @@ $stmt2->bindParam(':email', $_SESSION["email"]);
 $stmt2->execute();
 
 
-if( $stmt2->rowCount() < 0 )
+if( $stmt2->rowCount() > 0 )
 {
   echo $_SESSION["email"] . " already exists please chose another";
 }
