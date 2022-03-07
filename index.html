@@ -91,10 +91,8 @@
 					$password = test_input($_POST["password"]);
 				}
 
-			}
-
 				if (empty($firstNameErr) and empty($lastNameErr) and empty($emailErr) and  empty($passwordErr))
-		{
+			  {
 				// Set session variables
 				$_SESSION["firstName"] = $firstName;
 				$_SESSION["lastName"] = $lastName;
@@ -103,7 +101,11 @@
 				header("location: ./phpFunctions/register.php");
 				exit();
 
+			 }
+
 		}
+
+				
 
 
 
