@@ -22,11 +22,10 @@ $stmt->bindParam(':password', $hashPassword);
 $stmt2 = $conn->prepare("SELECT * FROM users WHERE email = :email");
 $stmt2->bindParam(':email', $_SESSION["email"]);
 $stmt2->execute();
-$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-var_dump($result);
-if(!empty($result))
+
+
+if( $stmt2->rowCount() < 0 )
 {
- 
   echo $_SESSION["email"] . " already exists please chose another";
 }
 else {
