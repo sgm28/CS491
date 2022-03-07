@@ -14,6 +14,7 @@
 
 
 
+
 		try {
 
 		$stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
@@ -23,6 +24,7 @@
 		 // set the resulting array to associative
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   $var_dump($result);
+  print_r($result);
   $hashPassword = $result['usersPassword'];
   var_dump($hashPassword);
   var_dump($password);
