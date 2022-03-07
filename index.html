@@ -94,6 +94,8 @@
 
 
 
+
+
 			//gets rids of leading whitespace, blackslahses and converts "<" to "&lt"
 			function test_input($data) {
 				$data = trim($data);
@@ -133,12 +135,21 @@
 	</form>
 
 
+	<?php
+
+
+		if (empty($firstNameErr) and empty($lastNameErr) and empty($emailErr) and  empty($passwordErr))
+		{
+
+				header("location: ./DatabaseConnection/connectionForDB.php");
+				exit();
+		}
+
+	?>
 
 
 
 
-
-	
 
 
 
