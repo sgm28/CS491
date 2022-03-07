@@ -1,3 +1,15 @@
-The index.html page was created with the help of the following tutorial on W3School
+How to setup up html on herkou
+https://consultantsussex.com/deploy-html-on-heroku/
 
+
+Registration
+The index.html page was created with the help of the following tutorial on W3School
 https://www.w3schools.com/php/php_form_complete.asp
+
+
+Database Setup 
+Use step 9 to 12 only
+https://www.doabledanny.com/Deploy-PHP-And-MySQL-to-Heroku
+
+
+
