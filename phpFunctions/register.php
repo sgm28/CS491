@@ -15,16 +15,27 @@ try {
 
 
 $hashPassword = password_hash($_SESSION["password"], PASSWORD_DEFAULT);
-
-
 $stmt->bindParam(':password', $hashPassword);
 
 
+    
+$stmt2 = $conn->prepare("SELECT * FROM users WHERE email = :email");
+$stmt2->bindParam(':email', $_SESSION["email"]);
+$stmt2->execute();
+$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
-        
-
+if(!empty($result))
+{
+  echo $_SESSION["email"] + "already exists";
+}
+else
+{
   $stmt->execute();
   echo "New record created successfully";
+}
+
+
+  
 
 } catch(PDOException $e) {
   echo $sql . "<br>" . $e->getMessage();
