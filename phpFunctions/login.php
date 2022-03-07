@@ -21,6 +21,8 @@
 		 // set the resulting array to associative
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   $hashPassword = $result['usersPassword'];
+  var_dump($hashPassword);
+  var_dump($password);
 
   if (password_verify($password, $hashPassword))
   {
