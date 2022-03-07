@@ -26,13 +26,14 @@ $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
 if(!empty($result))
 {
-  echo "Hi";
-  echo $_SESSION["email"] . "already exists";
+ 
+  echo $_SESSION["email"] . " already exists please chose another";
 }
+else {
 
   $stmt->execute();
   echo "New record created successfully";
-
+}
 
   
 
