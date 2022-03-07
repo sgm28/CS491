@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 require "../DatabaseConnection/connectionForDB.php";
 
@@ -9,7 +9,7 @@ try {
 
  // prepare sql and bind parameters
  $stmt = $conn->prepare("INSERT INTO users (firstname, lastname, email, usersPassword) VALUES (:firstname, :lastname, :email, :password)");
- $stmt->bindParam(':firstname', $firstname);
+ $stmt->bindParam(':firstname', $_SESSION["firstName"]);
  $stmt->bindParam(':lastname', $lastname);
  $stmt->bindParam(':email', $email);
  $stmt->bindParam(':password', $password);
