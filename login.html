@@ -1,0 +1,114 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="registerStyles.css">
+	<title>Behind The Stick</title>
+</head>
+<body>
+
+	<!-- PHP SECTION -->
+		<?php
+
+			//Variables to store data
+			$email = "";
+			$password = "";
+
+			//Variables for Error Messages
+			$emailErr = "";
+			$passwordErr = "";
+
+
+			//Checking to see if the form was submitted 
+			// if form is submitted, 
+			//I am calling the test_input function to "clean the data", then returning the clean data back to the if statement
+			//Else printing error message
+
+			if ($_SERVER["REQUEST_METHOD"] == "POST")
+			{
+
+
+				if(empty($_POST["email"]))
+				{
+					$emailErr = "Email is required.";
+				}
+				else
+				{
+					$email = test_input($_POST["email"]);
+					
+					if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+					{
+						$emailErr = "Not a valid email.";
+					}
+
+				}
+
+				if(empty($_POST["password"]))
+				{
+					$passwordErr = "password is required.";
+				}
+				else
+				{
+					$password = test_input($_POST["password"]);
+				}
+
+				if ( empty($emailErr) and  empty($passwordErr))
+			  {
+				
+				$_SESSION["email"] = $email;
+				$_SESSION["password"] = $password;
+				//header("location: ./phpFunctions/register.php");
+				exit();
+
+			 }
+
+		   }
+
+				
+
+
+
+
+
+			//gets rids of leading whitespace, blackslahses and converts "<" to "&lt"
+			function test_input($data) {
+				$data = trim($data);
+				$data = stripslashes($data);
+				$data = htmlspecialchars($data);
+				return $data;
+
+			}	
+
+		?>
+
+
+	<!-- HTML SECTION -->
+
+	<h1>Behind The Stick Development </h1>
+
+	<!-- The index.html will submit the user input to this page and not move on to another -->
+	<!-- $_SERVER["PHP_SELF"] display the name of file that is submitting data -->
+	<!--  htmlspecialchars() prevents cross site scripting  -->
+
+	<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+		<label for="Email">Email</label> <span class="error">* <?php echo $emailErr; ?></span>
+		<input type="input" id="email" name="email" value="<?php echo $email;?>">
+		<label for="password">Password</label> <span class="error">* <?php echo $passwordErr; ?></span>
+		<input type="password" id="password" name="password" value="<?php echo $password;?>">
+		<input type="submit" value="Login">
+	</form>
+
+
+	
+
+
+
+
+
+
+</body>
+</html>
+
+
