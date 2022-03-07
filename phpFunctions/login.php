@@ -7,7 +7,11 @@
 	{
 		echo "Good";
 
-		
+
+	}
+	else
+	{
+		echo "Not Good";
 	}
 
 ?>
