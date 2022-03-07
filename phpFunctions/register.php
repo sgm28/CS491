@@ -23,7 +23,7 @@ $stmt2 = $conn->prepare("SELECT * FROM users WHERE email = :email");
 $stmt2->bindParam(':email', $_SESSION["email"]);
 $stmt2->execute();
 $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
+var_dump($result);
 if(!empty($result))
 {
  
