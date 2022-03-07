@@ -1,7 +1,7 @@
 <?php
 
 
-require "../DatabaseConnection/connectionForDB.php"
+require "../DatabaseConnection/connectionForDB.php";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
