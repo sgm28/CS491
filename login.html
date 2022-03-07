@@ -93,13 +93,16 @@
 	<!--  htmlspecialchars() prevents cross site scripting  -->
 
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+
+		
 		<label for="Email">Email</label> <span class="error">* <?php echo $emailErr; ?></span>
 		<input type="input" id="email" name="email" value="<?php echo $email;?>">
+
 		<label for="password">Password</label> <span class="error">* <?php echo $passwordErr; ?></span>
 		<input type="password" id="password" name="password" value="<?php echo $password;?>">
+
 		<input type="submit" value="Login">
 	</form>
-
 
 	
 
