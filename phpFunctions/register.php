@@ -12,7 +12,7 @@ try {
  $stmt->bindParam(':firstname', $firstname);
  $stmt->bindParam(':lastname', $lastname);
  $stmt->bindParam(':email', $email);
- $stmt->bindParam(':usersPassword', $password);
+ $stmt->bindParam(':password', $password);
 
 
   $stmt->execute();
