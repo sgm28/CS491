@@ -23,9 +23,10 @@
 
 
 		 // set the resulting array to associative
-  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-
+print_r($result);
+print("\n");
 print_r($stmt);
 
   if(empty($result)){
