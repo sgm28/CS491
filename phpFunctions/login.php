@@ -10,7 +10,7 @@
 		$password = $_POST['password'];
 
 
-		var_dump($password);
+
 
 
 		try {
@@ -22,19 +22,19 @@
 		 // set the resulting array to associative
   $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-print_r($result);
-print("\n");
-print_r($stmt);
+//print_r($result);
+//print("\n");
+//print_r($stmt);
 
   if(empty($result)){
 
   	echo " result are empty";
   }
   $var_dump($result['email']);
-  print_r($result);
+  //print_r($result);
   $hashPassword = $result['usersPassword'];
-  var_dump($hashPassword);
-  var_dump($password);
+  //var_dump($hashPassword);
+ // var_dump($password);
 
   if (password_verify($password, $hashPassword))
   {
