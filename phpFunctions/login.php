@@ -25,9 +25,9 @@
 		 // set the resulting array to associative
   $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-//print_r($result);
-//print("\n");
-//print_r($stmt);
+print_r($result);
+print("\n");
+print_r($stmt);
 
   if(empty($result)){
 
