@@ -30,7 +30,7 @@
 
   	echo " result are empty";
   }
-  $var_dump($result['email']);
+  //$var_dump($result['email']);
   //print_r($result);
   $hashPassword = $result['usersPassword'];
   //var_dump($hashPassword);
