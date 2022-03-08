@@ -39,10 +39,14 @@
   if (password_verify($password, $hashPassword))
   {
   	echo "password match";
+  	echo "<br>";
+  	header("location: ../home.html");
   }
   else {
 
   	echo "password do not match";
+  	echo "<br>";
+  	echo "please try again";
   }
 
 
