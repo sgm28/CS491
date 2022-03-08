@@ -46,8 +46,8 @@
   }
 
 
-		print_r($result);
-		print("\n");
+		//print_r($result);
+		//print("\n");
 	}
 	catch(PDOException $e) {
   			echo $sql . "<br>" . $e->getMessage();
