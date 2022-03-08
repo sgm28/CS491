@@ -16,7 +16,7 @@
 		try {
 
 		$stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
-		$stmt->bindParam(':email', "a@gmail.com");
+		$stmt->bindParam(':email', $email);
 		$stmt->execute();
 
 
