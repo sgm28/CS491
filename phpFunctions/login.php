@@ -25,6 +25,9 @@
 		 // set the resulting array to associative
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
+
+print_r($stmt);
+
   if(empty($result)){
 
   	echo " result are empty";
