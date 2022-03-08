@@ -10,7 +10,7 @@
 		$password = $_POST['password'];
 
 
-
+		var_dump($password);
 
 
 		try {
