@@ -1,5 +1,6 @@
-<?php  session_start(); ?> 
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,7 @@
 </head>
 <body>
 	<h1>Behind the stick</h1>
-	<p>Welcome <?php echo $_SESSION["firstName"]; ?></p>
+	<p>Welcome</p>
+	<?php echo $_SESSION["firstName"]; ?>
 </body>
-</html>
+</html> 
