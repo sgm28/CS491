@@ -41,6 +41,7 @@
   	echo "password match";
   	echo "<br>";
 
+$_SESSION["firstName"] = $result['firstname'];
   	header("location: ../home.html");
   }
   else {
@@ -48,7 +49,7 @@
   	echo "password do not match";
   	echo "<br>";
   	echo "please try again";
-  	$_SESSION["firstName"] = $result['firstname'];
+
   }
 
 
