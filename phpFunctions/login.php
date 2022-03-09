@@ -42,7 +42,7 @@
   	echo "<br>";
 
 $_SESSION["firstName"] = $result['firstname'];
-  	header("location: ../home.html");
+  	header("location: ../home.php");
   }
   else {
 
