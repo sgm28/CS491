@@ -39,9 +39,10 @@ if( $stmt2->rowCount() > 0 )
 else {
 
 //Admin registration
+
 if ($_SESSION['firstname'] == ADMIN1 || ADMIN2 || ADMIN3 || ADMIN4)
 {
-
+echo "Made it to line 44";
   $stmt3 = $conn->prepare("INSERT INTO users (firstname, lastname, email, usersPassword, user_type) VALUES (:firstname, :lastname, :email, :password, :user_type)");
  $stmt3->bindParam(':firstname', $_SESSION["firstName"]);
  $stmt3->bindParam(':lastname', $_SESSION["lastName"]);
