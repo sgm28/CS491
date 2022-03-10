@@ -46,10 +46,15 @@ if ($_SESSION['firstname'] == ADMIN1 || ADMIN2 || ADMIN3 || ADMIN4)
 echo "Made it to line 44";
   $stmt3 = $conn->prepare("INSERT INTO users (firstname, lastname, email, usersPassword, user_type) VALUES (:firstname, :lastname, :email, :password, :user_type)");
  $stmt3->bindParam(':firstname', $_SESSION["firstName"]);
+ echo "Made it to line 49";
  $stmt3->bindParam(':lastname', $_SESSION["lastName"]);
+ echo "Made it to line 51";
  $stmt3->bindParam(':email', $_SESSION["email"]);
+ echo "Made it to line 52";
  $stmt3->bindParam(':user_type', "$admin");
+ echo "Made it to line 55";
  $stmt3->execute();
+ echo "Made it to line 57";
  echo "New Admin record created successfully";
  exit();
 
