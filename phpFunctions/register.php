@@ -51,6 +51,7 @@ echo "Made it to line 44";
  echo "Made it to line 51";
  $stmt3->bindParam(':email', $_SESSION["email"]);
  echo "Made it to line 52";
+$stmt3->bindParam(':password', $hashPassword);
  $stmt3->bindParam(':user_type', $admin);
  echo "Made it to line 55";
  $stmt3->execute();
