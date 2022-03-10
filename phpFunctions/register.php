@@ -57,7 +57,8 @@ $stmt3->bindParam(':password', $hashPassword);
  $stmt3->execute();
  echo "Made it to line 57";
  echo "New Admin record created successfully";
- exit();
+ header("location: ../adminHome.php");
+
 
 }
 
