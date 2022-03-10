@@ -48,7 +48,7 @@ echo "Made it to line 44";
  $stmt3->bindParam(':firstname', $_SESSION["firstName"]);
  $stmt3->bindParam(':lastname', $_SESSION["lastName"]);
  $stmt3->bindParam(':email', $_SESSION["email"]);
- $stmt3->bindParam(':user_type', "$admin");;
+ $stmt3->bindParam(':user_type', "$admin");
  $stmt3->execute();
  echo "New Admin record created successfully";
  exit();
