@@ -9,11 +9,12 @@ try {
 //Argument 1 constant name
 //Argument 2 constant value
 //Arguemnt 3 case-insensitive
+  echo "Made it to line 12";
 define("ADMIN1", "Jennifer", true);
 define("ADMIN2","Peter", true);
 define("ADMIN3", "Austin", true);
 define("ADMIN4", "Sakar", true);
-
+echo "Made it to line 16";
  // prepare sql and bind parameters
  $stmt = $conn->prepare("INSERT INTO users (firstname, lastname, email, usersPassword) VALUES (:firstname, :lastname, :email, :password)");
  $stmt->bindParam(':firstname', $_SESSION["firstName"]);
