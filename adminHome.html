@@ -98,8 +98,7 @@
 				$_SESSION["email"] = $email;
 				$_SESSION["password"] = $password;
 				$_SESSION["user_type"] = $_POST['user_type'];
-				echo $_SESSION["user_type"];
-				//header("location: /phpFunctions/register.php");
+				header("location: /phpFunctions/register.php");
 				exit();
 
 			 }
