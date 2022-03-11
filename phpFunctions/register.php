@@ -43,7 +43,7 @@ else {
 if ($_SESSION['firstname'] == ADMIN1 || ADMIN2 || ADMIN3 || ADMIN4)
 {
   $admin ="admin";
-echo "Made it to line 44";
+   echo "Made it to line 44";
   $stmt3 = $conn->prepare("INSERT INTO users (firstname, lastname, email, usersPassword, user_type) VALUES (:firstname, :lastname, :email, :password, :user_type)");
  $stmt3->bindParam(':firstname', $_SESSION["firstName"]);
  echo "Made it to line 49";
@@ -57,6 +57,24 @@ $stmt3->bindParam(':password', $hashPassword);
  $stmt3->execute();
  echo "Made it to line 57";
  echo "New Admin record created successfully";
+
+ if ($result['user_type'] == "admin")
+  {
+      header("location: ./adminHome.php");
+      //header("location ./adminHome.php");
+  }
+  else {
+
+      header("location: ../home.php");
+      //header("location: ../home.php");
+  }
+
+
+
+
+
+
+
  header("location: ../adminHome.php");
 
 
