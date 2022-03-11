@@ -58,7 +58,7 @@ $stmt3->bindParam(':password', $hashPassword);
  echo "Made it to line 57";
  echo "New Admin record created successfully";
 
- if ($result['user_type'] == "admin")
+ if ( $result['user_type'] == "admin")
   {
       header("location: ./adminHome.php");
       //header("location ./adminHome.php");
