@@ -40,7 +40,7 @@ else {
 
 //Admin registration
 
-if ($_SESSION['firstname'] == ADMIN1 || ADMIN2 || ADMIN3 || ADMIN4)
+if ($_SESSION['firstname'] == ADMIN1 || $_SESSION['firstname'] == ADMIN2 || $_SESSION['firstname'] ==ADMIN3 || $_SESSION['firstname'] == ADMIN4)
 {
   $admin ="admin";
    echo "Made it to line 44";
