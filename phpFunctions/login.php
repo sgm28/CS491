@@ -42,7 +42,17 @@
   	echo "<br>";
 
 $_SESSION["firstName"] = $result['firstname'];
-  	header("location: ../home.php");
+
+	if ($result['user_type'] == "admin")
+	{
+		  header("location ../adminHome.php");
+	}
+	else {
+
+			header("location: ../home.php");
+	}
+
+  	
   }
   else {
 
