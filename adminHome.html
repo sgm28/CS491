@@ -89,7 +89,7 @@
 				{
 					$password = test_input($_POST["password"]);
 				}
-				
+
 				if (empty($firstNameErr) and empty($lastNameErr) and empty($emailErr) and  empty($passwordErr))
 			  {
 				// Set session variables
@@ -98,7 +98,7 @@
 				$_SESSION["email"] = $email;
 				$_SESSION["password"] = $password;
 				$_SESSION["user_type"] = $_POST['radio_name'];
-				header("location: ./phpFunctions/register.php");
+				header("location: /phpFunctions/register.php");
 				exit();
 
 			 }
