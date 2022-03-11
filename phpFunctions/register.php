@@ -78,13 +78,13 @@ $stmt4->bindParam(':password', $hashPassword);
 
  if ($_SESSION['user_type'] == "admin")
  {
-    echo "Line 81"
+    echo "Line 81";
     header("location: ./adminHome.php");
     exit();
  }
  else 
  {
-  echo "Line 87"
+  echo "Line 87";
    header("location: ../home.php");
    exit();
  }
@@ -96,7 +96,7 @@ $stmt4->bindParam(':password', $hashPassword);
 
 
   $stmt->execute();
-  echo "Line 99"
+  echo "Line 99";
   echo "New record created successfully";
   header("location: ../home.php");
 }
