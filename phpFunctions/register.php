@@ -79,10 +79,12 @@ $stmt4->bindParam(':password', $hashPassword);
  if ($_SESSION['user_type'] == "admin")
  {
     header("location: ./adminHome.php");
+    exit();
  }
  else 
  {
    header("location: ../home.php");
+   exit();
  }
 
   
