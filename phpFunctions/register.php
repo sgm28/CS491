@@ -61,13 +61,31 @@ $stmt3->bindParam(':password', $hashPassword);
   header("location: ./adminHome.php")
 
 
+}
 
+else if (isset($_SESSION['user_type']))
+{
+  $stmt4 = $conn->prepare("INSERT INTO users (firstname, lastname, email, usersPassword, user_type) VALUES (:firstname, :lastname, :email, :password, :user_type)");
 
-
-
-
+   $stmt4->bindParam(':firstname', $_SESSION["firstName"]);
+   $stmt4->bindParam(':lastname', $_SESSION["lastName"]);
+ $stmt4->bindParam(':email', $_SESSION["email"]);
+$stmt4->bindParam(':password', $hashPassword);
+ $stmt4->bindParam(':user_type', $_SESSION['user_type']);
+ $stmt4->execute();
  
+ echo  $_SESSION['user_type'] . "record created successfully";
 
+ if ($_SESSION['user_type'] == "admin")
+ {
+    header("location: ./adminHome.php")
+ }
+ else 
+ {
+   header("location: ../home.php");
+ }
+
+  
 
 }
 
