@@ -15,6 +15,7 @@
 			$lastName = "";
 			$email = "";
 			$password = "";
+			$user_type ="";
 
 			//Variables for Error Messages
 			$firstNameErr = "";
@@ -88,7 +89,7 @@
 				{
 					$password = test_input($_POST["password"]);
 				}
-
+				
 				if (empty($firstNameErr) and empty($lastNameErr) and empty($emailErr) and  empty($passwordErr))
 			  {
 				// Set session variables
@@ -96,6 +97,7 @@
 				$_SESSION["lastName"] = $lastName;
 				$_SESSION["email"] = $email;
 				$_SESSION["password"] = $password;
+				$_SESSION["user_type"] = $_POST['radio_name'];
 				header("location: ./phpFunctions/register.php");
 				exit();
 
@@ -144,7 +146,7 @@
 		<label for="password">Password</label> <span class="error">* <?php echo $passwordErr; ?></span>
 		<input type="password" id="password" name="password" value="<?php echo $password;?>">
 
-		 <input type="radio" id="normal" name="user_type" value="normal">
+		 <input type="radio" id="normal" name="user_type" value="normal" checked>
          <label for="normal">normal</label>
 
          <input type="radio" id="admin" name="user_type" value="admin">
