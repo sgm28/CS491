@@ -45,11 +45,11 @@ $_SESSION["firstName"] = $result['firstname'];
 
 	if ($result['user_type'] == "admin")
 	{
-		  //header("location ./adminHome.php");
+		  header("location: ./adminHome.php");
 	}
 	else {
 
-			//header("location: ../home.php");
+			header("location: ../home.php");
 	}
 
   	
