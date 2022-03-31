@@ -26,7 +26,7 @@
 
 			//Checking to see if the form was submitted 
 			// if form is submitted, 
-			//I am calling the test_input function to "clean the data", then returning the clean data back to the if statement
+			//I am calling the clean_input function to "clean the data", then returning the clean data back to the if statement
 			//Else printing error message
 
 			if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -38,7 +38,7 @@
 				}
 				else
 				{
-					$firstName = test_input($_POST["firstName"]);
+					$firstName = clean_input($_POST["firstName"]);
 
 
 					//Checking for valid first Name
@@ -55,7 +55,7 @@
 				else
 				{
 
-					$lastName = test_input($_POST["lastName"]);
+					$lastName = clean_input($_POST["lastName"]);
 
 					//Checking for valid Last Name
 					if (!preg_match("/^[a-zA-Z-' ]*$/", $lastName))
@@ -71,7 +71,7 @@
 				}
 				else
 				{
-					$email = test_input($_POST["email"]);
+					$email = clean_input($_POST["email"]);
 					
 					if (!filter_var($email, FILTER_VALIDATE_EMAIL))
 					{
@@ -87,7 +87,7 @@
 				}
 				else
 				{
-					$password = test_input($_POST["password"]);
+					$password = clean_input($_POST["password"]);
 				}
 
 				//If no error message, send data to the register.php file
@@ -105,7 +105,7 @@
 		   }
 
 			//gets rids of leading whitespace, blackslahses and converts "<" to "&lt"
-			function test_input($data) {
+		clean_input($data) {
 				$data = trim($data);
 				$data = stripslashes($data);
 				$data = htmlspecialchars($data);
@@ -135,7 +135,6 @@
 
 		<label for="password">Password</label> <span class="error">* <?php echo $passwordErr; ?></span>
 		<input type="password" id="password" name="password" value="<?php echo $password;?>">
-
 		<input type="submit" value="Sign Up">
 	</form>
 </body>
