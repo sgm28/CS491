@@ -105,7 +105,7 @@
 		   }
 
 			//gets rids of leading whitespace, blackslahses and converts "<" to "&lt"
-		clean_input($data) {
+		function clean_input($data) {
 				$data = trim($data);
 				$data = stripslashes($data);
 				$data = htmlspecialchars($data);
