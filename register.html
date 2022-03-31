@@ -42,7 +42,7 @@
 					$firstName = test_input($_POST["firstName"]);
 
 
-					//Checking for validate first Name
+					//Checking for valid first Name
 					if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName))
 					{
 						$firstNameErr = "Only letters, dashes and white space allowed.";
@@ -58,7 +58,7 @@
 
 					$lastName = test_input($_POST["lastName"]);
 
-					//Checking for validate Last Name
+					//Checking for valid Last Name
 					if (!preg_match("/^[a-zA-Z-' ]*$/", $lastName))
 					{
 						$lastNameErr = "Only letters, dashes and white space allowed.";
@@ -66,7 +66,7 @@
 
 					
 				}
-
+				//Checking if email field is empty
 				if(empty($_POST["email"]))
 				{
 					$emailErr = "Email is required.";
@@ -81,7 +81,7 @@
 					}
 
 				}
-
+				//Checking if password field is empty
 				if(empty($_POST["password"]))
 				{
 					$passwordErr = "password is required.";
@@ -90,7 +90,7 @@
 				{
 					$password = test_input($_POST["password"]);
 				}
-
+				//If no error message, send data to the register.php file
 				if (empty($firstNameErr) and empty($lastNameErr) and empty($emailErr) and  empty($passwordErr))
 			  {
 				// Set session variables
@@ -105,12 +105,6 @@
 
 		   }
 
-				
-
-
-
-
-
 			//gets rids of leading whitespace, blackslahses and converts "<" to "&lt"
 			function test_input($data) {
 				$data = trim($data);
@@ -121,7 +115,7 @@
 			}	
 
 		?>
-
+	<!--END OF PHP SECTION -->
 
 	<!-- HTML SECTION -->
 
