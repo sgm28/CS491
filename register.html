@@ -24,7 +24,6 @@
 			$emailErr = "";
 			$passwordErr = "";
 
-
 			//Checking to see if the form was submitted 
 			// if form is submitted, 
 			//I am calling the test_input function to "clean the data", then returning the clean data back to the if statement
@@ -62,10 +61,9 @@
 					if (!preg_match("/^[a-zA-Z-' ]*$/", $lastName))
 					{
 						$lastNameErr = "Only letters, dashes and white space allowed.";
-					}
-
-					
+					}			
 				}
+
 				//Checking if email field is empty
 				if(empty($_POST["email"]))
 				{
@@ -81,6 +79,7 @@
 					}
 
 				}
+
 				//Checking if password field is empty
 				if(empty($_POST["password"]))
 				{
@@ -90,6 +89,7 @@
 				{
 					$password = test_input($_POST["password"]);
 				}
+
 				//If no error message, send data to the register.php file
 				if (empty($firstNameErr) and empty($lastNameErr) and empty($emailErr) and  empty($passwordErr))
 			  {
@@ -102,7 +102,6 @@
 				exit();
 
 			 }
-
 		   }
 
 			//gets rids of leading whitespace, blackslahses and converts "<" to "&lt"
@@ -111,14 +110,11 @@
 				$data = stripslashes($data);
 				$data = htmlspecialchars($data);
 				return $data;
-
 			}	
-
 		?>
 	<!--END OF PHP SECTION -->
 
 	<!-- HTML SECTION -->
-
 	<h1>Behind The Stick Development </h1>
 
 	<!-- The index.html will submit the user input to this page and not move on to another -->
@@ -142,15 +138,6 @@
 
 		<input type="submit" value="Sign Up">
 	</form>
-
-
-	
-
-
-
-
-
-
 </body>
 </html>
 
