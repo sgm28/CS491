@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require "../DatabaseConnection/connectionForDB.php";
+require "../backEnd/DatabaseConnection/connectionForDB.php";
 
 try {
  
