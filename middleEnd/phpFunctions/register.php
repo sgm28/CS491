@@ -47,7 +47,7 @@ try {
      $stmt3->bindParam(':user_type', $admin);
      $stmt3->execute();
       echo "New Admin record created successfully";
-      header("location: ./adminHome.php");
+      header("location: ./adminHomePage.php");
       exit();
 
     }
@@ -66,7 +66,7 @@ try {
 
        if ($_SESSION['user_type'] == "admin")
        {
-          header("location: ../adminHome.php");
+          header("location: ../adminHomePage.php");
           exit();
        }
        else 
