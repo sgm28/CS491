@@ -1,5 +1,5 @@
 <?php
-$servername = " sql5.freemysqlhosting.net";
+$servername = "sql5.freemysqlhosting.net";
 $username = "sql5687781";
 $password = "LZuWfXvCg5";
 $db = "sql5687781";
