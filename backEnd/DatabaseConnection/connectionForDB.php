@@ -1,8 +1,8 @@
 <?php
-$servername = "us-cdbr-east-05.cleardb.net";
-$username = "b241659a762e01";
-$password = "8ff51cab";
-$db = "heroku_d060d81cfdb8333";
+$servername = " sql5.freemysqlhosting.net";
+$username = "sql5687781";
+$password = "LZuWfXvCg5";
+$db = "sql5687781";
 $conn = "";
 
 
