@@ -29,7 +29,8 @@ The website was built for a class.
   </div>
 
 # Link to website
-https://behind-the-stick-development.onrender.com/index.php<
+The website takes time to load. Please be patient.  
+https://behind-the-stick-development.onrender.com/index.php
 
 
 # More information about the project
