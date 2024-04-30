@@ -5,8 +5,9 @@ Created a website for bartenders.
 I learned the importance of communication and time management.
 
 # How I grew?
-I grew by explaining the project to  classmates and judges.
-
+I grew by explaining the project to  classmates and judges.  
+I grew by using a message template for code changes (git commit messages style guide).  
+https://udacity.github.io/git-styleguide/
 
 # What I got stuck on?
 Nothing
