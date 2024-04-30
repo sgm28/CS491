@@ -1,4 +1,25 @@
-# CS491
+# What I did? 
+Created a website for bartenders. 
+
+# What I learn?
+I learned the importance of communication and time management.
+
+# How I grew?
+I grew by explaining the project to  classmates and judges.
+
+
+# What I got stuck on?
+Nothing
+
+# What does this website do?
+- Allows user to login and logout
+- Displays the signed in user
+
+# Why did I build it?
+The website was built for a class. 
+
+# More information about the project
+
 Development environment for Bar Smarts Jan 2022
 
 Title:  Behind the stick<br><br>
